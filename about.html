@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Caden Brown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #0a0e27;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            color: #0a0e27;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .breadcrumb {
+            padding: 20px 0;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #0066ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #00d4ff;
+        }
+
+        .about-hero {
+            background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .about-hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .about-hero p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        section h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            font-weight: 800;
+            color: #0a0e27;
+        }
+
+        section p {
+            color: #475569;
+            line-height: 1.9;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .education-box {
+            background: #f8fafc;
+            padding: 35px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 4px solid #0066ff;
+        }
+
+        .education-box h3 {
+            color: #0066ff;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .education-box p {
+            color: #64748b;
+            margin: 8px 0;
+        }
+
+        .education-box .details {
+            margin-top: 15px;
+            font-size: 15px;
+            color: #475569;
+        }
+
+        .skills-section {
+            margin-top: 60px;
+        }
+
+        .skills-section h3 {
+            font-size: 24px;
+            color: #0a0e27;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .skill-category h4 {
+            color: #0066ff;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: white;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #0066ff;
+            font-weight: 600;
+            border: 1px solid #e0e7ff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f0f9ff 100%);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #e0e7ff;
+        }
+
+        .highlight-box h3 {
+            color: #0066ff;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlight-box li {
+            color: #475569;
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .highlight-box li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0066ff;
+            font-weight: 700;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin-top: 80px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #0066ff;
+            padding: 14px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #0a0e27;
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                gap: 20px;
+                font-size: 12px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .about-hero {
+                padding: 50px 20px;
+            }
+
+            .about-hero h1 {
+                font-size: 36px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            section h2 {
+                font-size: 32px;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h2>CB</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / About
+        </div>
+
+        <section class="about-hero">
+            <h1>About Me</h1>
+            <p>Strategic thinker combining economics expertise with modern technology</p>
+        </section>
+    </div>
+
+    <section style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <h2>Who I Am</h2>
+                    <p>
+                        I'm a strategic thinker focused on solving complex problems through data analysis and economic principles. My background combines rigorous analytical training with practical application to real-world challenges.
+                    </p>
+                    <p>
+                        I specialize in leveraging technology to drive insights, optimize decision-making, and create scalable solutions. Whether analyzing market dynamics or building data pipelines, I bring a methodical approach grounded in economic theory.
+                    </p>
+                    <p>
+                        My mission is to bridge the gap between economic science and modern technology, creating solutions that are both analytically sound and practically impactful.
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Key Focus Areas</h3>
+                    <ul>
+                        <li>Econometric modeling and analysis</li>
+                        <li>Data-driven strategy development</li>
+                        <li>Economic market analysis</li>
+                        <li>Statistical modeling and inference</li>
+                        <li>Full-stack development</li>
+                        <li>Business intelligence solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Education</h2>
+            
+            <div class="education-box">
+                <h3>Master of Science in Economics</h3>
+                <p><strong>Arizona State University</strong></p>
+                <div class="details">
+                    <p>Advanced coursework in econometrics, microeconomic theory, and quantitative analysis. Developed expertise in statistical modeling, causal inference, and economic research methodology.</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 40px; color: #64748b;">
+                Throughout my studies, I've developed a deep understanding of economic principles and their application to real-world problems. My education has equipped me with the analytical tools needed to tackle complex datasets and derive meaningful insights.
+            </p>
+        </div>
+    </section>
+
+    <section style="background-color: #f8fafc;">
+        <div class="container">
+            <h2>Core Competencies</h2>
+            
+            <div class="skills-section">
+                <div class="skills">
+                    <div class="skill-category">
+                        <h4>Economics & Analysis</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Econometrics</span>
+                            <span class="skill-tag">Economic Theory</span>
+                            <span class="skill-tag">Market Analysis</span>
+                            <span class="skill-tag">Statistical Modeling</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Programming</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">R</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Web Technologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Full-Stack Dev</span>
+                            <span class="skill-tag">API Development</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Data & Visualization</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Business Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>My Approach</h2>
+            <p>
+                I believe in combining theoretical rigor with practical application. Every analysis I conduct is grounded in sound economic theory, but always with an eye toward actionable insights. I'm passionate about clear communication—transforming complex analyses into understandable visualizations and reports.
+            </p>
+            <p>
+                In an increasingly data-driven world, I see my role as helping organizations make informed decisions based on economic principles and empirical evidence. Whether that's through advanced statistical modeling, strategic analysis, or full-stack development, I'm committed to delivering solutions that matter.
+            </p>
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <div class="container">
+            <h2>Let's Collaborate</h2>
+            <p>Interested in working together or want to discuss a project?</p>
+            <a href="index.html#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Caden Brown. Built with precision and purpose.</p>
+    </footer>
+</body>
+</html>
