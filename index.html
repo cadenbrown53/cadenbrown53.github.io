@@ -128,31 +128,6 @@
             100% { background-position: 0% 50%; }
         }
 
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: 
-                repeating-linear-gradient(
-                    90deg,
-                    transparent,
-                    transparent 50px,
-                    rgba(255, 255, 255, 0.03) 50px,
-                    rgba(255, 255, 255, 0.03) 51px
-                ),
-                repeating-linear-gradient(
-                    0deg,
-                    transparent,
-                    transparent 50px,
-                    rgba(255, 255, 255, 0.03) 50px,
-                    rgba(255, 255, 255, 0.03) 51px
-                );
-        }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -251,6 +226,18 @@
             line-height: 1.85;
             font-size: 15px;
             font-weight: 400;
+        }
+
+        .about-text ul {
+            margin-bottom: 28px;
+            color: #b8c0cc;
+            line-height: 1.85;
+            font-size: 15px;
+            padding-left: 24px;
+        }
+
+        .about-text li {
+            margin-bottom: 12px;
         }
 
         .education-box {
@@ -352,7 +339,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 32px;
         }
 
@@ -367,6 +354,12 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: inherit;
         }
 
         .project-card::before {
@@ -594,8 +587,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Data-Driven Strategy</h1>
-                <p>Economics expertise meets modern technology</p>
+                <h1>Economic Theory Meets Technology</h1>
+                <p>Bridging rigorous economic analysis with modern data science and computational methods</p>
                 <a href="about.html" class="cta-button">Learn More</a>
                 <a href="#contact" class="cta-button secondary">Get In Touch</a>
             </div>
@@ -610,35 +603,31 @@
             </div>
             
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Market Analysis Dashboard</h3>
-                    <p>Built an interactive dashboard providing real-time market intelligence and economic indicators. Integrated multiple data sources and implemented predictive models for trend analysis.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Data Viz</span>
-                        <span class="project-tag">Analytics</span>
+                <a href="portfolio.html" class="project-link">
+                    <div class="project-card">
+                        <h3>Tariff Impact Analysis on Coffee Imports</h3>
+                        <p>Conducted empirical economic analysis of U.S. tariff increases on green coffee bean imports using a Gravity model framework with Poisson Pseudo Maximum Likelihood (PPML) estimation. Identified short-run stockpiling behavior in response to tariff policy changes.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Econometrics</span>
+                            <span class="project-tag">PPML</span>
+                            <span class="project-tag">Trade Policy</span>
+                            <span class="project-tag">Stata</span>
+                        </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <h3>Econometric Platform</h3>
-                    <p>Developed a full-stack application for econometric analysis and statistical modeling. Features robust backend processing and intuitive frontend for complex data exploration.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Econometrics</span>
+                <a href="portfolio.html" class="project-link">
+                    <div class="project-card">
+                        <h3>Housing Price Index Forecasting</h3>
+                        <p>Built univariate and multivariate forecasting models for Washington State's Housing Price Index using ARIMA and VAR methodologies. Analyzed relationships between housing prices, unemployment, population growth, and income dynamics.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Time Series</span>
+                            <span class="project-tag">ARIMA</span>
+                            <span class="project-tag">VAR</span>
+                            <span class="project-tag">R</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Strategic Framework</h3>
-                    <p>Created a comprehensive framework for economic analysis and business strategy. Combines market research methodologies with data-driven decision models for enterprise clients.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Strategy</span>
-                        <span class="project-tag">Analysis</span>
-                        <span class="project-tag">Consulting</span>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -646,37 +635,51 @@
     <section id="about">
         <div class="container">
             <div class="about-grid">
-                <div>
+                <div class="about-text">
                     <h2>About Me</h2>
-                    <p>I'm a data scientist and economist with a passion for leveraging analytical insights to drive strategic decision-making. My background spans quantitative economics, statistical modeling, and full-stack software development.</p>
-                    <p>Currently pursuing a Master's degree in Economics at Arizona State University (Expected May 2026, GPA: 3.89), I hold a Bachelor's degree in Economics from Washington State University (May 2025, GPA: 3.78, Magna Cum Laude). I combine rigorous economic theory with modern computational techniques to solve complex business problems.</p>
-                    <p>I'm particularly interested in the intersection of technology, economics, and organizational strategy—helping teams extract meaningful insights from data and translate them into actionable strategies.</p>
+                    <p>I'm an economist and data scientist passionate about bridging economic theory with modern computational methods. My focus spans microeconomic and macroeconomic theory, econometric modeling, market analysis, and forecasting—all enhanced by proficiency in Python, R, Stata, and cutting-edge data science techniques.</p>
+                    <p>Currently pursuing a Master of Science in Economics at Arizona State University's W. P. Carey School of Business (Expected May 2026, GPA: 3.89), I completed my Bachelor of Science in Economic Sciences at Washington State University (May 2025, GPA: 3.78, Magna Cum Laude). My research interests include international trade, labor markets, industrial organization, and applied econometrics—approached through both theoretical frameworks and empirical analysis.</p>
+                    <p>Beyond technical skills, my diverse background has developed strong leadership, communication, and problem-solving abilities. From military service to student government to quantitative research, I've learned to collaborate effectively, communicate complex ideas clearly, and deliver results under pressure.</p>
+                    <p><strong>What I Bring:</strong></p>
+                    <ul>
+                        <li><strong>Theoretical Foundation:</strong> Deep understanding of micro/macro theory, industrial organization, and market design</li>
+                        <li><strong>Technical Expertise:</strong> Econometric modeling (PPML, VAR, ARIMA), statistical analysis, forecasting, and data visualization</li>
+                        <li><strong>Leadership & Communication:</strong> Judicial decision-making as ASWSU Associate Justice, team supervision in the Marine Corps</li>
+                        <li><strong>Problem-Solving:</strong> Applied research on trade policy, housing markets, and economic dynamics under real-world constraints</li>
+                        <li><strong>Adaptability:</strong> Transitioned from military operations to academic research to student governance with consistent excellence</li>
+                    </ul>
                 </div>
                 <div>
                     <div class="education-box">
-                        <h3>Master's in Economics</h3>
-                        <p>Arizona State University • Expected May 2026</p>
-                        <p>GPA: 3.89 • Specialized in econometrics and data analysis</p>
+                        <h3>Master of Science, Economics</h3>
+                        <p>W. P. Carey School of Business, Arizona State University</p>
+                        <p>Expected May 2026 • GPA: 3.89/4.00</p>
+                        <p style="margin-top: 12px; font-size: 13px;">W.P. Carey Merit Scholarship</p>
                     </div>
                     <div class="education-box">
-                        <h3>Bachelor's in Economics</h3>
-                        <p>Washington State University • May 2025</p>
-                        <p>GPA: 3.78 • Magna Cum Laude</p>
+                        <h3>Bachelor of Science, Economic Sciences</h3>
+                        <p>Washington State University, CAHNRS</p>
+                        <p>Graduated May 2025 • GPA: 3.78/4.00</p>
+                        <p style="margin-top: 12px; font-size: 13px;">Magna Cum Laude, President's Honor Roll, Glenn Terrell Presidential Scholarship</p>
                     </div>
                     <div class="education-box">
-                        <h3>Technical Skills</h3>
-                        <p>Python • R • SQL • JavaScript • React</p>
-                        <p>Statistical Modeling • Data Visualization • API Development</p>
+                        <h3>Core Competencies</h3>
+                        <p><strong>Technical:</strong> Python, Stata, R, LaTeX, Git, Microsoft Office</p>
+                        <p><strong>Economic Theory:</strong> Micro/Macro Theory, Industrial Organization, Market Design, International Trade</p>
+                        <p><strong>Analytical:</strong> Econometrics, Forecasting, Financial Modeling, Cost-Benefit Analysis, Optimization</p>
+                        <p><strong>Soft Skills:</strong> Leadership, Critical Thinking, Communication, Teamwork, Problem-Solving, Attention to Detail</p>
                     </div>
                     <div class="skills">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Economic Theory</span>
                         <span class="skill-tag">Econometrics</span>
-                        <span class="skill-tag">Data Analysis</span>
-                        <span class="skill-tag">Statistics</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Stata</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Data Science</span>
+                        <span class="skill-tag">Forecasting</span>
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Critical Thinking</span>
                     </div>
                 </div>
             </div>
@@ -691,7 +694,6 @@
                 <a href="mailto:cadenbrown53@gmail.com" class="contact-link">Email</a>
                 <a href="https://github.com/cadenbrown53" class="contact-link">GitHub</a>
                 <a href="https://www.linkedin.com/in/caden-brown/" class="contact-link">LinkedIn</a>
-                <a href="https://twitter.com" class="contact-link">Twitter</a>
             </div>
         </div>
     </section>

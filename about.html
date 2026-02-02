@@ -192,6 +192,58 @@
             color: #b8c0cc;
         }
 
+        .experience-section {
+            margin-top: 60px;
+        }
+
+        .experience-item {
+            background: linear-gradient(135deg, #1a2332 0%, #161b22 100%);
+            padding: 32px;
+            border-radius: 8px;
+            margin: 24px 0;
+            border-left: 4px solid #AA677C;
+            border: 1px solid rgba(170, 103, 124, 0.2);
+            border-left: 4px solid #AA677C;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .experience-item h3 {
+            color: #AA677C;
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .experience-item .meta {
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 16px;
+        }
+
+        .experience-item li {
+            color: #b8c0cc;
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .experience-item li::before {
+            content: '•';
+            position: absolute;
+            left: 8px;
+            color: #AA677C;
+            font-weight: bold;
+        }
+
         .skills-section {
             margin-top: 60px;
         }
@@ -282,6 +334,25 @@
             left: 8px;
             color: #63BF6D;
             font-weight: 700;
+        }
+
+        .profile-photo-container {
+            margin-bottom: 32px;
+        }
+
+        .profile-photo {
+            width: 100%;
+            border-radius: 8px;
+            border: 3px solid rgba(99, 191, 109, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .profile-photo:hover {
+            border-color: rgba(99, 191, 109, 0.5);
+            box-shadow: 0 12px 32px rgba(99, 191, 109, 0.2);
+            transform: translateY(-2px);
         }
 
         #contact {
@@ -483,25 +554,70 @@
                 <div>
                     <h2>Who I Am</h2>
                     <p>
-                        I'm a strategic thinker focused on solving complex problems through data analysis and economic principles. My background combines rigorous analytical training with practical application to real-world challenges.
+                        I'm an economist and data scientist who specializes in combining rigorous economic theory with modern computational methods. My work spans microeconomic and macroeconomic analysis, econometric modeling, industrial organization, and international trade—all approached through the lens of both theoretical frameworks and empirical investigation using advanced statistical techniques.
                     </p>
                     <p>
-                        I specialize in leveraging technology to drive insights, optimize decision-making, and create scalable solutions. Whether analyzing market dynamics or building data pipelines, I bring a methodical approach grounded in economic theory.
+                        My diverse background—from U.S. Marine Corps service to student judicial leadership to quantitative research—has cultivated not only technical expertise but also essential soft skills: leadership, effective communication, critical thinking, and the ability to work under pressure. Whether managing maintenance operations for F-18 aircraft, adjudicating constitutional cases, or conducting econometric analysis, I bring discipline, attention to detail, and a commitment to excellence.
                     </p>
                     <p>
-                        My mission is to bridge the gap between economic science and modern technology, creating solutions that are both analytically sound and practically impactful.
+                        I'm driven by the intersection of economic theory and technology. By leveraging tools like Python, Stata, and R alongside deep theoretical understanding, I transform complex economic questions into tractable empirical analyses. My goal is to bridge the gap between abstract economic models and real-world data, producing insights that are both theoretically sound and practically applicable.
                     </p>
                 </div>
 
-                <div class="highlight-box">
-                    <h3>Key Focus Areas</h3>
+                <div>
+                    <div class="profile-photo-container">
+                        <img src="IMG_7546.JPG" alt="Caden Brown" class="profile-photo">
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <h3>Research & Application Areas</h3>
                     <ul>
-                        <li>Econometric modeling and analysis</li>
-                        <li>Data-driven strategy development</li>
-                        <li>Economic market analysis</li>
-                        <li>Statistical modeling and inference</li>
-                        <li>Full-stack development</li>
-                        <li>Business intelligence solutions</li>
+                        <li>Microeconomic & macroeconomic theory</li>
+                        <li>Industrial organization & market design</li>
+                        <li>International trade & trade policy</li>
+                        <li>Labor economics & regional analysis</li>
+                        <li>Econometric modeling & causal inference</li>
+                        <li>Forecasting & time-series analysis</li>
+                        <li>Financial modeling & valuation</li>
+                        <li>Data science & computational economics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(to bottom, #0f1419 0%, #161b22 100%);">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-section">
+                <div class="experience-item">
+                    <h3>Associate Justice</h3>
+                    <div class="meta">The Associated Students of Washington State University | Pullman, WA | September 2024 – May 2025</div>
+                    <ul>
+                        <li>Adjudicated cases under the ASWSU Constitution and Bylaws, including cases involving intermember conflicts, violation of member conduct, and bylaw interpretation through writs of mandamus and formal reprimands</li>
+                        <li>Audited the ASWSU Constitution and Bylaws to ensure accuracy, clarity, and resolve conflicting language</li>
+                        <li>Served as a liaison between the President, Senate, student body, and university faculty to promote clear communication between governing bodies</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Lead Bartender</h3>
+                    <div class="meta">Cougar Cottage | Pullman, WA | August 2023 – June 2024</div>
+                    <ul>
+                        <li>Provided exceptional customer service by preparing and serving beverages while maintaining a welcoming and friendly environment, averaging $8,000-$10,000 in sales per shift</li>
+                        <li>Assisted in resolving conflicts and alleviated situations to ensure a safe and enjoyable atmosphere for patrons and staff during high volume shifts</li>
+                        <li>Trained team members to perform the duties of bartending and bouncing with exceptional results</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Aviation Ordnance Systems Technician, Corporal</h3>
+                    <div class="meta">United States Marine Corps | San Diego, CA | October 2020 – June 2023</div>
+                    <ul>
+                        <li>Repaired and maintained advanced weapon systems and support equipment for over 30 F-18 series aircraft</li>
+                        <li>Guaranteed 100% compliance with quality assurance and safety standards by supervising maintenance operations and conducting regular inspections</li>
+                        <li>Conducted data analysis and strategic planning for maintenance schedules and program management while serving as a work center supervisor</li>
                     </ul>
                 </div>
             </div>
@@ -514,23 +630,25 @@
             
             <div class="education-box">
                 <h3>Master of Science in Economics</h3>
-                <p><strong>Arizona State University</strong> • Expected May 2026 • GPA: 3.89</p>
+                <p><strong>W. P. Carey School of Business, Arizona State University</strong> • Expected May 2026 • GPA: 3.89/4.00</p>
                 <div class="details">
-                    <p>Advanced coursework in econometrics, microeconomic theory, and quantitative analysis. Developed expertise in statistical modeling, causal inference, and economic research methodology.</p>
+                    <p><strong>Honors:</strong> W.P. Carey Merit Scholarship</p>
+                    <p><strong>Relevant Coursework:</strong> Microeconomic and Macroeconomic Theory, Data Science & Econometrics, Industrial Organization, Market Design</p>
                 </div>
             </div>
 
             <div class="education-box">
-                <h3>Bachelor of Science in Economics</h3>
-                <p><strong>Washington State University</strong> • May 2025 • GPA: 3.78</p>
+                <h3>Bachelor of Science in Economic Sciences</h3>
+                <p><strong>CAHNRS, Washington State University</strong> • Graduated May 2025 • GPA: 3.78/4.00</p>
                 <p style="margin-top: 8px;"><em>Graduated Magna Cum Laude</em></p>
                 <div class="details">
-                    <p>Comprehensive foundation in economic theory, quantitative methods, and data analysis. Developed strong analytical and problem-solving skills through rigorous coursework in microeconomics, macroeconomics, and statistical analysis.</p>
+                    <p><strong>Honors:</strong> President's Honor Roll, Glenn Terrell Presidential Scholarship</p>
+                    <p><strong>Relevant Coursework:</strong> Labor Economics, Monetary Theory and Policy, Intermediate Macroeconomic Analysis, Econometrics, Public Economics, Business Ethics, Microeconomic Theory, Calculus for Business and Economics</p>
                 </div>
             </div>
 
             <p style="margin-top: 40px; color: #596274;">
-                Throughout my studies, I've developed a deep understanding of economic principles and their application to real-world problems. My education has equipped me with the analytical tools needed to tackle complex datasets and derive meaningful insights.
+                My education has provided a rigorous foundation in economic theory, quantitative methods, and empirical analysis. Combined with hands-on research experience, I'm equipped to tackle complex economic questions and deliver data-driven insights.
             </p>
         </div>
     </section>
@@ -540,48 +658,101 @@
             <h2>Core Competencies</h2>
             
             <div class="skills-section">
+                <h3>Technical & Analytical Skills</h3>
                 <div class="skills">
                     <div class="skill-category">
-                        <h4>Economics & Analysis</h4>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Econometrics</span>
-                            <span class="skill-tag">Economic Theory</span>
-                            <span class="skill-tag">Market Analysis</span>
-                            <span class="skill-tag">Statistical Modeling</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Programming</h4>
+                        <h4>Programming & Tools</h4>
                         <div class="skill-tags">
                             <span class="skill-tag">Python</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Stata</span>
                             <span class="skill-tag">R</span>
+                            <span class="skill-tag">LaTeX</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Microsoft Office</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h4>Web Technologies</h4>
+                        <h4>Economic Theory</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">Full-Stack Dev</span>
-                            <span class="skill-tag">API Development</span>
+                            <span class="skill-tag">Microeconomic Theory</span>
+                            <span class="skill-tag">Macroeconomic Theory</span>
+                            <span class="skill-tag">Industrial Organization</span>
+                            <span class="skill-tag">Market Design</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h4>Data & Visualization</h4>
+                        <h4>Econometric Methods</h4>
                         <div class="skill-tags">
+                            <span class="skill-tag">Regression Analysis</span>
+                            <span class="skill-tag">Time-Series Models</span>
+                            <span class="skill-tag">Panel Data Methods</span>
+                            <span class="skill-tag">Causal Inference</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Applied Analysis</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Forecasting</span>
+                            <span class="skill-tag">Financial Modeling</span>
+                            <span class="skill-tag">Cost-Benefit Analysis</span>
                             <span class="skill-tag">Data Visualization</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Data Analysis</span>
-                            <span class="skill-tag">Business Intelligence</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="skills-section" style="margin-top: 60px;">
+                <h3>Professional & Soft Skills</h3>
+                <div class="skills">
+                    <div class="skill-category">
+                        <h4>Leadership & Management</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Decision-Making</span>
+                            <span class="skill-tag">Supervision</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Communication</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Technical Writing</span>
+                            <span class="skill-tag">Presentation Skills</span>
+                            <span class="skill-tag">Stakeholder Liaison</span>
+                            <span class="skill-tag">Complex Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Problem-Solving</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Critical Thinking</span>
+                            <span class="skill-tag">Analytical Reasoning</span>
+                            <span class="skill-tag">Strategic Planning</span>
+                            <span class="skill-tag">Conflict Resolution</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Work Ethic & Character</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Attention to Detail</span>
+                            <span class="skill-tag">Discipline</span>
+                            <span class="skill-tag">Adaptability</span>
+                            <span class="skill-tag">Teamwork</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 40px; color: #9ca3af; font-size: 14px; line-height: 1.7;">
+                <strong>From Military Service to Economic Research:</strong> My time in the Marine Corps instilled discipline, leadership, and operational excellence. As Associate Justice at ASWSU, I honed critical thinking, communication, and decision-making abilities. These experiences complement my technical skills, enabling me to lead projects, collaborate effectively, and communicate complex economic concepts to diverse audiences.
+            </p>
         </div>
     </section>
 
@@ -589,10 +760,13 @@
         <div class="container">
             <h2>My Approach</h2>
             <p>
-                I believe in combining theoretical rigor with practical application. Every analysis I conduct is grounded in sound economic theory, but always with an eye toward actionable insights. I'm passionate about clear communication—transforming complex analyses into understandable visualizations and reports.
+                I believe in the power of combining theoretical rigor with empirical precision. Economic theory provides the framework for understanding complex phenomena—whether market dynamics, trade relationships, or labor market outcomes. Modern computational tools and econometric methods allow me to test these theories against real-world data, generating insights that are both theoretically grounded and empirically validated.
             </p>
             <p>
-                In an increasingly data-driven world, I see my role as helping organizations make informed decisions based on economic principles and empirical evidence. Whether that's through advanced statistical modeling, strategic analysis, or full-stack development, I'm committed to delivering solutions that matter.
+                My diverse background shapes this approach. Military service taught me discipline, attention to detail, and the importance of rigorous procedures. Student government experience developed my ability to communicate complex ideas, mediate disagreements, and make principled decisions. Graduate training in economics provides the theoretical foundation and analytical toolkit. Together, these experiences enable me to tackle challenging research questions, collaborate across disciplines, and communicate findings effectively to technical and non-technical audiences alike.
+            </p>
+            <p>
+                Whether investigating international trade dynamics, forecasting economic trends, or analyzing market structures, I bring curiosity, methodical analysis, and a commitment to producing work that meets the highest standards of economic research.
             </p>
         </div>
     </section>
